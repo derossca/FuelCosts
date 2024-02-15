@@ -19,90 +19,85 @@ public class Main {
         {
             System.out.println("Enter the number of gallons of gas in the tank:");
 
-            if(in.hasNextDouble()) //need this if else statement to read in a valid number and not a string
+            if(in.hasNextDouble())
             {
                 gallonsGas = in.nextDouble();
                 in.nextLine(); //clearing buffer
-                //need this if statement to set condition so user cannot input negative gallons of gas
-                if(gallonsGas > -1)
+
+                if(gallonsGas >= 0)
                 {
-                    done = true; //we got a valid number so loop ends
+                    done = true;
                 }
                 else
                 {
-                    if(gallonsGas <= -1)
-                    {
-                        System.out.println("Please enter a valid positive number, not " + gallonsGas);
-                    }
+                    System.out.println("Please enter a positive number, not " + gallonsGas);
                 }
             }
             else
             {
                 trash = in.nextLine();
-                System.out.println("Please enter a valid number, not " + trash);
+                System.out.println("Please enter a valid number not " + trash);
             }
         } while(!done);
-        //need another do while loop for next variable that requires input from user
+        //another do while for next variable requiring input from user
         do
         {
-            System.out.println("Enter the fuel efficiency as miles per gallon of your vehicle:");
+            System.out.println("Enter the fuel efficiency number of miles per gallon your vehicle gets:");
 
             if(in.hasNextDouble())
             {
                 milesPerGallon = in.nextDouble();
                 in.nextLine(); //clearing buffer
 
-                if(milesPerGallon > -1) //cannot travel negative miles per gallon
+                if(milesPerGallon >= 0) //cannot have negative miles per gallon
                 {
-                    done = true; //we got a valid number so loop ends
+                    done = true;
                 }
                 else
                 {
-                    if(milesPerGallon <= -1)
-                    {
-                        System.out.println("Please enter a valid positive number, not " + milesPerGallon);
-                    }
+                    System.out.println("Please enter a positive number, not " + milesPerGallon);
                 }
             }
             else
             {
                 trash = in.nextLine();
-                System.out.println("Please enter a valid number, not " + trash);
+                System.out.println("Please enter a valid number not " + trash);
             }
-        } while(!done);
-        //need yet another do while loop for variable that needs user input
+        } while(!done); //???WHAT IS GOING ON???
+        //another for the final variable needing input
         do
         {
-            System.out.println("Enter the price of gas per gallon:");
+            System.out.println("Enter the price per gallon:");
 
             if(in.hasNextDouble())
             {
                 pricePerGallon = in.nextDouble();
                 in.nextLine(); //clearing buffer
-                if(pricePerGallon > 0) //no such thing as free gas
+
+                if(pricePerGallon >= 0)
                 {
-                    done = true; //we got a valid number so loop ends
+                    done = true;
                 }
                 else
                 {
-                    if(pricePerGallon <= 0)
-                    {
-                        System.out.println("Please enter a valid positive number, not " + pricePerGallon);
-                    }
+                    System.out.println("Please enter a positive number, not " + pricePerGallon);
                 }
-
             }
             else
             {
                 trash = in.nextLine();
-                System.out.println("Please enter a valid number, not " + trash);
+                System.out.println("Please enter a valid number not " + trash);
             }
-        } while(!done);
+        } while(!done); //???WHAT IS GOING ON???
 
+        //now compute the other variables and output the results to the user
         pricePerHundredMiles = (100 / milesPerGallon) * pricePerGallon;
-        System.out.println("The cost per 100 miles is : " + pricePerHundredMiles);
         totalMilesCanTravel = (gallonsGas * milesPerGallon);
-        System.out.println("Your vehicle can travel a total of " + totalMilesCanTravel + " with " + gallonsGas + " gallons of gas at " + milesPerGallon + " mpg");
+        System.out.println("The price of every 100 miles is " + pricePerHundredMiles);
+        System.out.println("Your vehicle can travel a total of " + totalMilesCanTravel + " with " + gallonsGas + " in the vehicle");
 
     }
 }
+
+//        double pricePerHundredMiles = 0;
+//        double totalMilesCanTravel = 0;
