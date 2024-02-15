@@ -74,7 +74,7 @@ public class Main {
                 pricePerGallon = in.nextDouble();
                 in.nextLine(); //clearing buffer
 
-                if(pricePerGallon >= 0)
+                if(pricePerGallon >= 0) //gas is not free
                 {
                     done = true;
                 }
