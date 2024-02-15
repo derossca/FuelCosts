@@ -73,11 +73,3 @@ public class Main {
 
     }
 }
-
-//        double gallonsGas = 0;
-//        double milesPerGallon = 0;
-//        double pricePerGallon = 0;
-//        double pricePerHundredMiles = 0;
-//        double totalMilesCanTravel = 0;
-//        String trash = ""; //for bad input use
-//        Boolean done = false;
