@@ -23,7 +23,18 @@ public class Main {
             {
                 gallonsGas = in.nextDouble();
                 in.nextLine(); //clearing buffer
-                done = true; //we got a valid number so loop ends
+                //need this if statement to set condition so user cannot input negative gallons of gas
+                if(gallonsGas > -1)
+                {
+                    done = true; //we got a valid number so loop ends
+                }
+                else
+                {
+                    if(gallonsGas <= -1)
+                    {
+                        System.out.println("Please enter a valid positive number, not " + gallonsGas);
+                    }
+                }
             }
             else
             {
@@ -40,7 +51,18 @@ public class Main {
             {
                 milesPerGallon = in.nextDouble();
                 in.nextLine(); //clearing buffer
-                done = true; //we got a valid number so loop ends
+
+                if(milesPerGallon > -1) //cannot travel negative miles per gallon
+                {
+                    done = true; //we got a valid number so loop ends
+                }
+                else
+                {
+                    if(milesPerGallon <= -1)
+                    {
+                        System.out.println("Please enter a valid positive number, not " + milesPerGallon);
+                    }
+                }
             }
             else
             {
@@ -57,7 +79,18 @@ public class Main {
             {
                 pricePerGallon = in.nextDouble();
                 in.nextLine(); //clearing buffer
-                done = true; //we got a valid number so loop ends
+                if(pricePerGallon > 0) //no such thing as free gas
+                {
+                    done = true; //we got a valid number so loop ends
+                }
+                else
+                {
+                    if(pricePerGallon <= 0)
+                    {
+                        System.out.println("Please enter a valid positive number, not " + pricePerGallon);
+                    }
+                }
+
             }
             else
             {
