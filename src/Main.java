@@ -9,6 +9,8 @@ public class Main {
         double gallonsGas = 0;
         double milesPerGallon = 0;
         double pricePerGallon = 0;
+        double pricePerHundredMiles = 0;
+        double totalMilesCanTravel = 0;
         String trash = ""; //for bad input use
         Boolean done = false;
 
@@ -64,6 +66,18 @@ public class Main {
             }
         } while(!done);
 
+        pricePerHundredMiles = (100 / milesPerGallon) * pricePerGallon;
+        System.out.println("The cost per 100 miles is : " + pricePerHundredMiles);
+        totalMilesCanTravel = (gallonsGas * milesPerGallon);
+        System.out.println("Your vehicle can travel a total of " + totalMilesCanTravel + " with " + gallonsGas + " gallons of gas at " + milesPerGallon + " mpg");
 
     }
 }
+
+//        double gallonsGas = 0;
+//        double milesPerGallon = 0;
+//        double pricePerGallon = 0;
+//        double pricePerHundredMiles = 0;
+//        double totalMilesCanTravel = 0;
+//        String trash = ""; //for bad input use
+//        Boolean done = false;
