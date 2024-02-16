@@ -12,7 +12,7 @@ public class Main {
         double pricePerHundredMiles = 0;
         double totalMilesCanTravel = 0;
         String trash = ""; //for bad input use
-        Boolean done = false;
+        boolean done = false;
 
         //do while loop for each of the 3 variables that need input
         do
@@ -39,6 +39,8 @@ public class Main {
                 System.out.println("Please enter a valid number not " + trash);
             }
         } while(!done);
+        //resets sentinel
+        done = false;
         //another do while for next variable requiring input from user
         do
         {
@@ -63,7 +65,9 @@ public class Main {
                 trash = in.nextLine();
                 System.out.println("Please enter a valid number not " + trash);
             }
-        } while(!done); //???WHAT IS GOING ON???
+        } while(!done);
+        //resetting sentinel
+        done = false;
         //another for the final variable needing input
         do
         {
@@ -98,6 +102,3 @@ public class Main {
 
     }
 }
-
-//        double pricePerHundredMiles = 0;
-//        double totalMilesCanTravel = 0;
