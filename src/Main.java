@@ -92,7 +92,7 @@ public class Main {
                 trash = in.nextLine();
                 System.out.println("Please enter a valid number not " + trash);
             }
-        } while(!done); //???WHAT IS GOING ON???
+        } while(!done);
 
         //now compute the other variables and output the results to the user
         pricePerHundredMiles = (100 / milesPerGallon) * pricePerGallon;
