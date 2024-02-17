@@ -97,8 +97,8 @@ public class Main {
         //now compute the other variables and output the results to the user
         pricePerHundredMiles = (100 / milesPerGallon) * pricePerGallon;
         totalMilesCanTravel = (gallonsGas * milesPerGallon);
-        System.out.println("The price of every 100 miles is " + pricePerHundredMiles);
-        System.out.println("Your vehicle can travel a total of " + totalMilesCanTravel + " with " + gallonsGas + " in the vehicle");
+        System.out.println("The price of every 100 miles is " + pricePerHundredMiles + " dollars");
+        System.out.println("Your vehicle can travel a total of " + totalMilesCanTravel + " miles with " + gallonsGas + " gallons in the vehicle");
 
     }
 }
